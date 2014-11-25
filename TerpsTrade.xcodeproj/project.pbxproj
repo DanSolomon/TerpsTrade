@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD0B9CB01A242D9200C7B093 /* BookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0B9CAF1A242D9200C7B093 /* BookDetailsViewController.m */; };
+		FD0DDD9119FFD425008705B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDD9019FFD425008705B1 /* main.m */; };
+		FD0DDD9419FFD425008705B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDD9319FFD425008705B1 /* AppDelegate.m */; };
+		FD0DDD9719FFD425008705B1 /* TerpsTrade.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDD9519FFD425008705B1 /* TerpsTrade.xcdatamodeld */; };
+		FD0DDD9D19FFD425008705B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0DDD9B19FFD425008705B1 /* Main.storyboard */; };
+		FD0DDD9F19FFD425008705B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0DDD9E19FFD425008705B1 /* Images.xcassets */; };
+		FD0DDDA219FFD425008705B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0DDDA019FFD425008705B1 /* LaunchScreen.xib */; };
+		FD0DDDAE19FFD426008705B1 /* TerpsTradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDDAD19FFD426008705B1 /* TerpsTradeTests.m */; };
+		FD0DDDB919FFD883008705B1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDDB819FFD883008705B1 /* MainViewController.m */; };
+		FD0DDDBF19FFE15A008705B1 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDDBE19FFE15A008705B1 /* SearchResultsTableViewController.m */; };
+		FD1B72F21A24E47B007BB112 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1B72F11A24E47B007BB112 /* MessagesViewController.m */; };
+		FD1B72F41A24E536007BB112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B72F31A24E536007BB112 /* MapKit.framework */; };
+		FDAE60DC1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD0DDDA819FFD426008705B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD0DDD8319FFD425008705B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD0DDD8A19FFD425008705B1;
+			remoteInfo = TerpsTrade;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD0B9CAE1A242D9200C7B093 /* BookDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailsViewController.h; sourceTree = "<group>"; };
+		FD0B9CAF1A242D9200C7B093 /* BookDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailsViewController.m; sourceTree = "<group>"; };
+		FD0DDD8B19FFD425008705B1 /* TerpsTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerpsTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0DDD8F19FFD425008705B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD0DDD9019FFD425008705B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD0DDD9219FFD425008705B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD0DDD9319FFD425008705B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD0DDD9619FFD425008705B1 /* TerpsTrade.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TerpsTrade.xcdatamodel; sourceTree = "<group>"; };
+		FD0DDD9C19FFD425008705B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD0DDD9E19FFD425008705B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FD0DDDA119FFD425008705B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FD0DDDA719FFD426008705B1 /* TerpsTradeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerpsTradeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0DDDAC19FFD426008705B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD0DDDAD19FFD426008705B1 /* TerpsTradeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerpsTradeTests.m; sourceTree = "<group>"; };
+		FD0DDDB719FFD883008705B1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FD0DDDB819FFD883008705B1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FD0DDDBD19FFE15A008705B1 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultsTableViewController.h; path = ../SearchResultsTableViewController.h; sourceTree = "<group>"; };
+		FD0DDDBE19FFE15A008705B1 /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultsTableViewController.m; path = ../SearchResultsTableViewController.m; sourceTree = "<group>"; };
+		FD1B72F01A24E47B007BB112 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		FD1B72F11A24E47B007BB112 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		FD1B72F31A24E536007BB112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FDAE60DA1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
+		FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD0DDD8819FFD425008705B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1B72F41A24E536007BB112 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD0DDDA419FFD426008705B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD0DDD8219FFD425008705B1 = {
+			isa = PBXGroup;
+			children = (
+				FD1B72F31A24E536007BB112 /* MapKit.framework */,
+				FD0DDD8D19FFD425008705B1 /* TerpsTrade */,
+				FD0DDDAA19FFD426008705B1 /* TerpsTradeTests */,
+				FD0DDD8C19FFD425008705B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD0DDD8C19FFD425008705B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD0DDD8B19FFD425008705B1 /* TerpsTrade.app */,
+				FD0DDDA719FFD426008705B1 /* TerpsTradeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD0DDD8D19FFD425008705B1 /* TerpsTrade */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE60D71A1E5EED00E3C2F3 /* Model */,
+				FDAE60D81A1E5EF200E3C2F3 /* View */,
+				FDAE60D91A1E5EF900E3C2F3 /* Controller */,
+				FD0DDD9E19FFD425008705B1 /* Images.xcassets */,
+				FD0DDDA019FFD425008705B1 /* LaunchScreen.xib */,
+				FD0DDD9519FFD425008705B1 /* TerpsTrade.xcdatamodeld */,
+				FD0DDD8E19FFD425008705B1 /* Supporting Files */,
+			);
+			path = TerpsTrade;
+			sourceTree = "<group>";
+		};
+		FD0DDD8E19FFD425008705B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD0DDD9219FFD425008705B1 /* AppDelegate.h */,
+				FD0DDD9319FFD425008705B1 /* AppDelegate.m */,
+				FD0DDD8F19FFD425008705B1 /* Info.plist */,
+				FD0DDD9019FFD425008705B1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD0DDDAA19FFD426008705B1 /* TerpsTradeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD0DDDAD19FFD426008705B1 /* TerpsTradeTests.m */,
+				FD0DDDAB19FFD426008705B1 /* Supporting Files */,
+			);
+			path = TerpsTradeTests;
+			sourceTree = "<group>";
+		};
+		FD0DDDAB19FFD426008705B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD0DDDAC19FFD426008705B1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDAE60D71A1E5EED00E3C2F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE60DA1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.h */,
+				FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FDAE60D81A1E5EF200E3C2F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD0DDD9B19FFD425008705B1 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FDAE60D91A1E5EF900E3C2F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD1B72F01A24E47B007BB112 /* MessagesViewController.h */,
+				FD1B72F11A24E47B007BB112 /* MessagesViewController.m */,
+				FD0DDDB719FFD883008705B1 /* MainViewController.h */,
+				FD0DDDB819FFD883008705B1 /* MainViewController.m */,
+				FD0DDDBE19FFE15A008705B1 /* SearchResultsTableViewController.m */,
+				FD0DDDBD19FFE15A008705B1 /* SearchResultsTableViewController.h */,
+				FD0B9CAE1A242D9200C7B093 /* BookDetailsViewController.h */,
+				FD0B9CAF1A242D9200C7B093 /* BookDetailsViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD0DDD8A19FFD425008705B1 /* TerpsTrade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD0DDDB119FFD426008705B1 /* Build configuration list for PBXNativeTarget "TerpsTrade" */;
+			buildPhases = (
+				FD0DDD8719FFD425008705B1 /* Sources */,
+				FD0DDD8819FFD425008705B1 /* Frameworks */,
+				FD0DDD8919FFD425008705B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TerpsTrade;
+			productName = TerpsTrade;
+			productReference = FD0DDD8B19FFD425008705B1 /* TerpsTrade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD0DDDA619FFD426008705B1 /* TerpsTradeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD0DDDB419FFD426008705B1 /* Build configuration list for PBXNativeTarget "TerpsTradeTests" */;
+			buildPhases = (
+				FD0DDDA319FFD426008705B1 /* Sources */,
+				FD0DDDA419FFD426008705B1 /* Frameworks */,
+				FD0DDDA519FFD426008705B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD0DDDA919FFD426008705B1 /* PBXTargetDependency */,
+			);
+			name = TerpsTradeTests;
+			productName = TerpsTradeTests;
+			productReference = FD0DDDA719FFD426008705B1 /* TerpsTradeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD0DDD8319FFD425008705B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = JonkGames;
+				TargetAttributes = {
+					FD0DDD8A19FFD425008705B1 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					FD0DDDA619FFD426008705B1 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = FD0DDD8A19FFD425008705B1;
+					};
+				};
+			};
+			buildConfigurationList = FD0DDD8619FFD425008705B1 /* Build configuration list for PBXProject "TerpsTrade" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD0DDD8219FFD425008705B1;
+			productRefGroup = FD0DDD8C19FFD425008705B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD0DDD8A19FFD425008705B1 /* TerpsTrade */,
+				FD0DDDA619FFD426008705B1 /* TerpsTradeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD0DDD8919FFD425008705B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD0DDD9D19FFD425008705B1 /* Main.storyboard in Resources */,
+				FD0DDDA219FFD425008705B1 /* LaunchScreen.xib in Resources */,
+				FD0DDD9F19FFD425008705B1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD0DDDA519FFD426008705B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD0DDD8719FFD425008705B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD0B9CB01A242D9200C7B093 /* BookDetailsViewController.m in Sources */,
+				FD0DDD9419FFD425008705B1 /* AppDelegate.m in Sources */,
+				FD1B72F21A24E47B007BB112 /* MessagesViewController.m in Sources */,
+				FD0DDD9719FFD425008705B1 /* TerpsTrade.xcdatamodeld in Sources */,
+				FD0DDDB919FFD883008705B1 /* MainViewController.m in Sources */,
+				FD0DDDBF19FFE15A008705B1 /* SearchResultsTableViewController.m in Sources */,
+				FDAE60DC1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m in Sources */,
+				FD0DDD9119FFD425008705B1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD0DDDA319FFD426008705B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD0DDDAE19FFD426008705B1 /* TerpsTradeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD0DDDA919FFD426008705B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD0DDD8A19FFD425008705B1 /* TerpsTrade */;
+			targetProxy = FD0DDDA819FFD426008705B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD0DDD9B19FFD425008705B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD0DDD9C19FFD425008705B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD0DDDA019FFD425008705B1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD0DDDA119FFD425008705B1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD0DDDAF19FFD426008705B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FD0DDDB019FFD426008705B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD0DDDB219FFD426008705B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TerpsTrade/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FD0DDDB319FFD426008705B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TerpsTrade/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FD0DDDB519FFD426008705B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TerpsTradeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TerpsTrade.app/TerpsTrade";
+			};
+			name = Debug;
+		};
+		FD0DDDB619FFD426008705B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TerpsTradeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TerpsTrade.app/TerpsTrade";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD0DDD8619FFD425008705B1 /* Build configuration list for PBXProject "TerpsTrade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD0DDDAF19FFD426008705B1 /* Debug */,
+				FD0DDDB019FFD426008705B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD0DDDB119FFD426008705B1 /* Build configuration list for PBXNativeTarget "TerpsTrade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD0DDDB219FFD426008705B1 /* Debug */,
+				FD0DDDB319FFD426008705B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD0DDDB419FFD426008705B1 /* Build configuration list for PBXNativeTarget "TerpsTradeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD0DDDB519FFD426008705B1 /* Debug */,
+				FD0DDDB619FFD426008705B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD0DDD9519FFD425008705B1 /* TerpsTrade.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD0DDD9619FFD425008705B1 /* TerpsTrade.xcdatamodel */,
+			);
+			currentVersion = FD0DDD9619FFD425008705B1 /* TerpsTrade.xcdatamodel */;
+			path = TerpsTrade.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FD0DDD8319FFD425008705B1 /* Project object */;
+}
