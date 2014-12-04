@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SearchResultsTableViewCell.h"
+#import "BookDetailsViewController.h"
 
 @interface MainViewController()
 
@@ -17,8 +18,13 @@
 @property (strong, nonatomic) NSArray *distances;
 @property (strong, nonatomic) NSArray *images;
 
-@end
+@property (strong, nonatomic) NSArray *englishBookTitles;
+@property (strong, nonatomic) NSArray *englishAuthors;
+@property (strong, nonatomic) NSArray *englishPrices;
+@property (strong, nonatomic) NSArray *englishDistances;
+@property (strong, nonatomic) NSArray *englishImages;
 
+@end
 
 @implementation MainViewController
 
@@ -28,7 +34,12 @@
 @synthesize distances = _distances;
 @synthesize images = _images;
 
+int arrayCount = 0; // all array set to 0?
 
+
+/*
+ Calculus data
+ */
 - (NSArray *)bookTitles
 {
   if (!_bookTitles) {
@@ -61,6 +72,40 @@
   return _distances;
 }
 
+/*
+ English data
+ */
+- (NSArray *)englishBookTitles
+{
+  if (!_englishBookTitles) {
+    _englishBookTitles = @[@"English101: Literature", @"English for Dummies", @"English: We Speak gewd yes.", @"English: The Untold Stories", @"English."];
+  }
+  return _englishBookTitles;
+}
+
+- (NSArray *)englishAuthors
+{
+  if (!_englishAuthors) {
+    _englishAuthors = @[@"Jonathon Park", @"Jacob Streutt", @"William Blen", @"Horace Boragio, Jackson Scott", @"Patrick J. Poelst"];
+  }
+  return _englishAuthors;
+}
+
+- (NSArray *)englishPrices
+{
+  if (!_englishPrices) {
+    _englishPrices = @[@"$35", @"$10", @"$130", @"$453.33", @"$365.33"];
+  }
+  return _englishPrices;
+}
+
+- (NSArray *)englishDistances
+{
+  if (!_englishDistances) {
+    _englishDistances = @[@"0.4 mi", @"1.6 mi", @"0.4 mi", @"1.0 mi", @".1 mi"];
+  }
+  return _englishDistances;
+}
 
 
 - (void)viewDidLoad {
@@ -73,6 +118,12 @@
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+  self.navigationController.navigationBarHidden = YES;
+
+}
+
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
@@ -80,6 +131,22 @@
 - (IBAction)searchButton:(UIButton *)sender {
   [self.createListingButton setHidden:TRUE];
   [self.tableView setHidden:FALSE];
+  
+  NSString *text = self.searchTextField.text;
+  NSLog(@"Entered text is:%@",text);
+  
+  if( [text isEqualToString:@"math"] ){
+    NSLog(@"math entered");
+    arrayCount = 1;
+  }else if ( [text isEqualToString:@"english"]){
+    NSLog(@"english entered");
+    arrayCount = 2;
+  }else{
+    NSLog(@"entered else");
+    arrayCount = 0; // set back to default array or all items ary.
+  }
+  
+  [[self tableView] reloadData];
 }
 
 #pragma mark - UITableView Delegates
@@ -97,17 +164,27 @@
     cell = [tableView dequeueReusableCellWithIdentifier:@"BookCell"];
   }
   
-  cell.titleLabel.text = [self.bookTitles objectAtIndex:indexPath.row];
-  cell.priceLabel.text = [self.prices objectAtIndex:indexPath.row];
-  cell.distanceAwayLabel.text = [self.distances objectAtIndex:indexPath.row];
-  cell.authorLabel.text = [self.authors objectAtIndex:indexPath.row];
+  
+  if(arrayCount == 2){
+    cell.titleLabel.text = [self.englishBookTitles objectAtIndex:indexPath.row];
+    cell.priceLabel.text = [self.englishPrices objectAtIndex:indexPath.row];
+    cell.distanceAwayLabel.text = [self.englishDistances objectAtIndex:indexPath.row];
+    cell.authorLabel.text = [self.englishAuthors objectAtIndex:indexPath.row];
+    
+  }else{
+    cell.titleLabel.text = [self.bookTitles objectAtIndex:indexPath.row];
+    cell.priceLabel.text = [self.prices objectAtIndex:indexPath.row];
+    cell.distanceAwayLabel.text = [self.distances objectAtIndex:indexPath.row];
+    cell.authorLabel.text = [self.authors objectAtIndex:indexPath.row];
+  }
+
   
   return cell;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - TextField Delegates
@@ -127,5 +204,27 @@
   [textField resignFirstResponder];
   return YES;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if([[segue identifier] isEqualToString:@"ShowDetails"]) {
+    BookDetailsViewController *bookDetailsViewController = segue.destinationViewController;
+    
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    
+    self.title = [self.bookTitles objectAtIndex:indexPath.row];
+    self.author = [self.authors objectAtIndex:indexPath.row];
+    self.price = [self.prices objectAtIndex:indexPath.row];
+    
+    bookDetailsViewController.title = self.title;
+    bookDetailsViewController.author = [NSString stringWithFormat:@"Author: %@", self.author];
+    bookDetailsViewController.price = self.price;
+    
+    
+    
+  }
+
+}
+
 
 @end
