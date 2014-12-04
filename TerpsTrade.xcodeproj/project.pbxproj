@@ -16,7 +16,6 @@
 		FD0DDDA219FFD425008705B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0DDDA019FFD425008705B1 /* LaunchScreen.xib */; };
 		FD0DDDAE19FFD426008705B1 /* TerpsTradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDDAD19FFD426008705B1 /* TerpsTradeTests.m */; };
 		FD0DDDB919FFD883008705B1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDDB819FFD883008705B1 /* MainViewController.m */; };
-		FD0DDDBF19FFE15A008705B1 /* SearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDDBE19FFE15A008705B1 /* SearchResultsTableViewController.m */; };
 		FD1B72F21A24E47B007BB112 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1B72F11A24E47B007BB112 /* MessagesViewController.m */; };
 		FD1B72F41A24E536007BB112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B72F31A24E536007BB112 /* MapKit.framework */; };
 		FDAE60DC1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */; };
@@ -49,8 +48,6 @@
 		FD0DDDAD19FFD426008705B1 /* TerpsTradeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerpsTradeTests.m; sourceTree = "<group>"; };
 		FD0DDDB719FFD883008705B1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		FD0DDDB819FFD883008705B1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		FD0DDDBD19FFE15A008705B1 /* SearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultsTableViewController.h; path = ../SearchResultsTableViewController.h; sourceTree = "<group>"; };
-		FD0DDDBE19FFE15A008705B1 /* SearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultsTableViewController.m; path = ../SearchResultsTableViewController.m; sourceTree = "<group>"; };
 		FD1B72F01A24E47B007BB112 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
 		FD1B72F11A24E47B007BB112 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
 		FD1B72F31A24E536007BB112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -162,8 +159,6 @@
 				FD1B72F11A24E47B007BB112 /* MessagesViewController.m */,
 				FD0DDDB719FFD883008705B1 /* MainViewController.h */,
 				FD0DDDB819FFD883008705B1 /* MainViewController.m */,
-				FD0DDDBE19FFE15A008705B1 /* SearchResultsTableViewController.m */,
-				FD0DDDBD19FFE15A008705B1 /* SearchResultsTableViewController.h */,
 				FD0B9CAE1A242D9200C7B093 /* BookDetailsViewController.h */,
 				FD0B9CAF1A242D9200C7B093 /* BookDetailsViewController.m */,
 			);
@@ -275,7 +270,6 @@
 				FD1B72F21A24E47B007BB112 /* MessagesViewController.m in Sources */,
 				FD0DDD9719FFD425008705B1 /* TerpsTrade.xcdatamodeld in Sources */,
 				FD0DDDB919FFD883008705B1 /* MainViewController.m in Sources */,
-				FD0DDDBF19FFE15A008705B1 /* SearchResultsTableViewController.m in Sources */,
 				FDAE60DC1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m in Sources */,
 				FD0DDD9119FFD425008705B1 /* main.m in Sources */,
 			);
