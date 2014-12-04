@@ -73,6 +73,12 @@
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+  self.navigationController.navigationBarHidden = YES;
+
+}
+
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
@@ -107,17 +113,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
-  NSLog(@"11");
-  self.title = [self.bookTitles objectAtIndex:indexPath.row];
-  self.author = [self.authors objectAtIndex:indexPath.row];
-  self.price = [self.prices objectAtIndex:indexPath.row];
-  
-  //[self performSegueWithIdentifier:@"ShowDetails" sender:self];
-}
-
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -147,7 +142,13 @@
     bookDetailsViewController.title = self.title;
     bookDetailsViewController.author = self.author;
     bookDetailsViewController.price = self.price;
-
+    
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    
+    self.title = [self.bookTitles objectAtIndex:indexPath.row];
+    self.author = [self.authors objectAtIndex:indexPath.row];
+    self.price = [self.prices objectAtIndex:indexPath.row];
+    
   }
 
 }
