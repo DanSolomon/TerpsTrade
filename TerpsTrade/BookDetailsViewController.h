@@ -16,4 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *author;
+@property (nonatomic, copy) NSString *price;
+
 @end

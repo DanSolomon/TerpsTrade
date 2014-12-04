@@ -16,4 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *createListingButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *price;
+@property (nonatomic, copy) NSString *author;
+
 @end

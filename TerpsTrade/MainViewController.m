@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "SearchResultsTableViewCell.h"
+#import "BookDetailsViewController.h"
 
 @interface MainViewController()
 
@@ -18,7 +19,6 @@
 @property (strong, nonatomic) NSArray *images;
 
 @end
-
 
 @implementation MainViewController
 
@@ -105,9 +105,20 @@
   return cell;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   
+  NSLog(@"11");
+  self.title = [self.bookTitles objectAtIndex:indexPath.row];
+  self.author = [self.authors objectAtIndex:indexPath.row];
+  self.price = [self.prices objectAtIndex:indexPath.row];
+  
+  //[self performSegueWithIdentifier:@"ShowDetails" sender:self];
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - TextField Delegates
@@ -127,5 +138,19 @@
   [textField resignFirstResponder];
   return YES;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if([[segue identifier] isEqualToString:@"ShowDetails"]) {
+    BookDetailsViewController *bookDetailsViewController = segue.destinationViewController;
+    NSLog(@"22");
+    bookDetailsViewController.title = self.title;
+    bookDetailsViewController.author = self.author;
+    bookDetailsViewController.price = self.price;
+
+  }
+
+}
+
 
 @end

@@ -10,9 +10,15 @@
 
 @implementation BookDetailsViewController
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)viewDidLoad
 {
-  
+  [super viewDidLoad];
+  self.navigationController.navigationBarHidden = NO;
+  [self.navigationController.navigationBar setBackgroundColor:[UIColor redColor]];
+  [self.titleLabel setText:self.title];
+  [self.authorLabel setText:self.author];
+  [self.priceLabel setText:self.price];
+
 }
 
 @end
