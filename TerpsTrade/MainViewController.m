@@ -138,16 +138,18 @@
 {
   if([[segue identifier] isEqualToString:@"ShowDetails"]) {
     BookDetailsViewController *bookDetailsViewController = segue.destinationViewController;
-    NSLog(@"22");
-    bookDetailsViewController.title = self.title;
-    bookDetailsViewController.author = self.author;
-    bookDetailsViewController.price = self.price;
     
     NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
     
     self.title = [self.bookTitles objectAtIndex:indexPath.row];
     self.author = [self.authors objectAtIndex:indexPath.row];
     self.price = [self.prices objectAtIndex:indexPath.row];
+    
+    bookDetailsViewController.title = self.title;
+    bookDetailsViewController.author = [NSString stringWithFormat:@"Author: %@", self.author];
+    bookDetailsViewController.price = self.price;
+    
+    
     
   }
 

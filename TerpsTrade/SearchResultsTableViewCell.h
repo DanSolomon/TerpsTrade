@@ -10,10 +10,12 @@
 
 @interface SearchResultsTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *bookImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *bookThumbnail;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceAwayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceAwayLabel;
+
 
 @end

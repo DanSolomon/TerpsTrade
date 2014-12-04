@@ -49,7 +49,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calculus For Dummies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-jK-lBi">
-                                                    <rect key="frame" x="81" y="12" width="174" height="21"/>
+                                                    <rect key="frame" x="81" y="12" width="181" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,13 +58,13 @@
                                                     <rect key="frame" x="8" y="12" width="64" height="64"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Morris Kline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrh-cc-FAg">
-                                                    <rect key="frame" x="81" y="34" width="92" height="21"/>
+                                                    <rect key="frame" x="81" y="34" width="164" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$55" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kt-qm-uid">
-                                                    <rect key="frame" x="81" y="60" width="29" height="21"/>
+                                                    <rect key="frame" x="81" y="55" width="164" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,6 +78,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="authorLabel" destination="Lrh-cc-FAg" id="eB5-LQ-wPH"/>
+                                            <outlet property="bookThumbnail" destination="rrI-vC-yzz" id="Z89-7c-P7L"/>
+                                            <outlet property="distanceAwayLabel" destination="5hf-rB-KOp" id="86L-3v-FP3"/>
+                                            <outlet property="priceLabel" destination="1kt-qm-uid" id="Fuq-1e-I7n"/>
+                                            <outlet property="titleLabel" destination="CWq-jK-lBi" id="mvv-EO-11b"/>
                                             <segue destination="gZP-OL-7I5" kind="show" identifier="ShowDetails" id="CSp-wE-URL"/>
                                         </connections>
                                     </tableViewCell>
@@ -100,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195" y="375"/>
+            <point key="canvasLocation" x="1195" y="371"/>
         </scene>
         <!--Details-->
         <scene sceneID="EWS-Wv-6ms">
@@ -136,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNQ-q5-KqD">
-                                <rect key="frame" x="158" y="530" width="162" height="39"/>
+                                <rect key="frame" x="160" y="530" width="160" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Map">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
