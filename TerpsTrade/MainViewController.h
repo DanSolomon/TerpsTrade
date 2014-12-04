@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@class SearchResultsTableViewCell;
+
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *searchField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIButton *createListingButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
