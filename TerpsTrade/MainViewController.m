@@ -60,8 +60,15 @@ int arrayCount = 0; // all array set to 0?
         arrayCount = 0; // set back to default array or all items ary.
     }
     
-
-    [[self tableView] reloadData];
+    
+    //[ self.tableView reloadData];
+    
+//    NSString *temp = self.tableView cellForRowAtIndexPath:<#(NSIndexPath *)#>
+    
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+    
+//    NSIndexSet * sections = [NSIndexSet indexSetWithIndex:0];
+//    [self.tableView reloadSections:sections withRowAnimation:UITableViewRowAnimationNone];
     
 }
 
@@ -160,6 +167,7 @@ int arrayCount = 0; // all array set to 0?
     if( arrayCount == 0 || arrayCount == 1 ){
         return [self.bookTitles count];
     }
+    NSLog(@"arrayCount is indeed 2 ->numberOfRowsInSection");
     return [self.englishBookTitles count];
 }
 
@@ -174,6 +182,8 @@ int arrayCount = 0; // all array set to 0?
     
     
     if(arrayCount == 2){
+        NSLog(@"arrayCount is indeed 2 ->cellForRowAtIndexPath");
+//        NSLog( @"%@",  [self.englishBookTitles objectAtIndex:indexPath.row]);
         cell.titleLabel.text = [self.englishBookTitles objectAtIndex:indexPath.row];
         cell.priceLabel.text = [self.englishPrices objectAtIndex:indexPath.row];
         cell.distanceAwayLabel.text = [self.englishDistances objectAtIndex:indexPath.row];
