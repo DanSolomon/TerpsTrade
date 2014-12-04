@@ -20,4 +20,5 @@
 @property (nonatomic, copy) NSString *price;
 @property (nonatomic, copy) NSString *author;
 
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @end
