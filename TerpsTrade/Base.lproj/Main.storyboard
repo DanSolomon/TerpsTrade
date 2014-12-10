@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lLE-dn-5RV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lLE-dn-5RV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Main-->
@@ -149,7 +149,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dwB-3L-1X7" kind="show" id="NdT-dn-0Lg"/>
+                                    <action selector="mapButtonPressed:" destination="gZP-OL-7I5" eventType="touchUpInside" id="cMi-Fo-fr9"/>
+                                    <segue destination="dwB-3L-1X7" kind="show" identifier="mapSegue" id="NdT-dn-0Lg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxE-So-gkW">
@@ -160,7 +161,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hhi-vI-dTX" kind="show" id="fQM-1O-U9s"/>
+                                    <action selector="messageButtonPressed:" destination="gZP-OL-7I5" eventType="touchUpInside" id="XEN-l5-DW0"/>
+                                    <segue destination="hhi-vI-dTX" kind="show" identifier="messageSeque" id="fQM-1O-U9s"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikf-g6-hZ1">
@@ -192,12 +194,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mi6-2i-VfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1571" y="381"/>
+            <point key="canvasLocation" x="1627" y="375"/>
         </scene>
-        <!--Messages View Controller-->
+        <!--Demo Messages View Controller-->
         <scene sceneID="qrH-ta-OXz">
             <objects>
-                <viewController id="hhi-vI-dTX" customClass="MessagesViewController" sceneMemberID="viewController">
+                <viewController id="hhi-vI-dTX" customClass="DemoMessagesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T9q-o9-EuJ"/>
                         <viewControllerLayoutGuide type="bottom" id="urR-VR-4mr"/>
@@ -211,12 +213,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9R-XI-USh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2374" y="1039"/>
+            <point key="canvasLocation" x="2386" y="1103"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Controller-->
         <scene sceneID="h4Y-O0-wyE">
             <objects>
-                <viewController id="dwB-3L-1X7" sceneMemberID="viewController">
+                <viewController id="dwB-3L-1X7" customClass="MapController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sne-0T-wZz"/>
                         <viewControllerLayoutGuide type="bottom" id="kLi-PU-epe"/>
@@ -225,17 +227,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-w3-H6C">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-w3-H6C">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aeb-w3-H6C" firstAttribute="top" secondItem="vO4-Zz-Znt" secondAttribute="top" id="Lss-33-hxB"/>
+                            <constraint firstItem="aeb-w3-H6C" firstAttribute="bottom" secondItem="kLi-PU-epe" secondAttribute="top" id="QW2-Ai-706"/>
+                            <constraint firstItem="aeb-w3-H6C" firstAttribute="leading" secondItem="vO4-Zz-Znt" secondAttribute="leading" id="fM4-39-iXN"/>
+                            <constraint firstAttribute="trailing" secondItem="aeb-w3-H6C" secondAttribute="trailing" id="hdt-bX-DOX"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="aeb-w3-H6C" id="GzX-Oo-ITW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4D-s2-S1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978" y="1039"/>
+            <point key="canvasLocation" x="1898" y="1120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ww9-PQ-OSI">

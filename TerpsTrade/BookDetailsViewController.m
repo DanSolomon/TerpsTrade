@@ -6,7 +6,10 @@
 //  Copyright (c) 2014 JonkGames. All rights reserved.
 //
 
+
+#import "DemoMessagesViewController.h"
 #import "BookDetailsViewController.h"
+#import "MapController.h"
 
 @implementation BookDetailsViewController
 
@@ -19,6 +22,31 @@
   [self.authorLabel setText:self.author];
   [self.priceLabel setText:self.price];
 
+}
+- (IBAction)mapButtonPressed:(id)sender {
+    
+    [self performSegueWithIdentifier:@"mapSegue" sender:sender];
+}
+
+- (IBAction)messageButtonPressed:(id)sender {
+    
+    [self performSegueWithIdentifier:@"messageSeque" sender:sender];
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    if([[segue identifier] isEqualToString:@"mapSegue"]){
+        MapController *mpc = segue.destinationViewController;
+        
+        [mpc setLongitude: 40.7903];
+        [mpc setLatitude: 73.9597];
+    
+    }else{//message segue
+        NSLog(@"messageSegue");
+        DemoMessagesViewController *mvc = segue.destinationViewController;
+        
+    }
 }
 
 @end
