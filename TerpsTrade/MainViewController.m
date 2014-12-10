@@ -72,6 +72,14 @@ int arrayCount = 0; // all array set to 0?
   return _distances;
 }
 
+- (NSArray *)images
+{
+  if (!_images) {
+    _images = @[@"calculus-intuitive-64.jpg", @"calculus-for-dummies-64.jpg", @"calculus-lifesaver-64.png", @"calculus-64.jpg", @"calculus-7th-edition-64.jpg"];
+  }
+  return _images;
+}
+
 /*
  English data
  */
@@ -121,7 +129,6 @@ int arrayCount = 0; // all array set to 0?
 - (void)viewDidAppear:(BOOL)animated
 {
   self.navigationController.navigationBarHidden = YES;
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -170,12 +177,14 @@ int arrayCount = 0; // all array set to 0?
     cell.priceLabel.text = [self.englishPrices objectAtIndex:indexPath.row];
     cell.distanceAwayLabel.text = [self.englishDistances objectAtIndex:indexPath.row];
     cell.authorLabel.text = [self.englishAuthors objectAtIndex:indexPath.row];
+    cell.bookThumbnail.image = [UIImage imageNamed:[self.images objectAtIndex:indexPath.row]];
     
-  }else{
+  } else {
     cell.titleLabel.text = [self.bookTitles objectAtIndex:indexPath.row];
     cell.priceLabel.text = [self.prices objectAtIndex:indexPath.row];
     cell.distanceAwayLabel.text = [self.distances objectAtIndex:indexPath.row];
     cell.authorLabel.text = [self.authors objectAtIndex:indexPath.row];
+    cell.bookThumbnail.image = [UIImage imageNamed:[self.images objectAtIndex:indexPath.row]];
   }
 
   
@@ -215,11 +224,13 @@ int arrayCount = 0; // all array set to 0?
     self.title = [self.bookTitles objectAtIndex:indexPath.row];
     self.author = [self.authors objectAtIndex:indexPath.row];
     self.price = [self.prices objectAtIndex:indexPath.row];
+    self.imageName = [self.images objectAtIndex:indexPath.row];
     
     bookDetailsViewController.title = self.title;
     bookDetailsViewController.author = [NSString stringWithFormat:@"Author: %@", self.author];
     bookDetailsViewController.price = self.price;
-    
+    bookDetailsViewController.imageName = self.imageName;
+    NSLog(@"Image name: %@", self.imageName);
     
     
   }

@@ -18,6 +18,16 @@
 		FD0DDDB919FFD883008705B1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0DDDB819FFD883008705B1 /* MainViewController.m */; };
 		FD1B72F21A24E47B007BB112 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1B72F11A24E47B007BB112 /* MessagesViewController.m */; };
 		FD1B72F41A24E536007BB112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1B72F31A24E536007BB112 /* MapKit.framework */; };
+		FD2148CB1A37D766005E0108 /* calculus-7th-edition-64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C11A37D766005E0108 /* calculus-7th-edition-64.jpg */; };
+		FD2148CC1A37D766005E0108 /* calculus-7th-edition-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C21A37D766005E0108 /* calculus-7th-edition-125.jpg */; };
+		FD2148CD1A37D766005E0108 /* calculus-64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C31A37D766005E0108 /* calculus-64.jpg */; };
+		FD2148CE1A37D766005E0108 /* calculus-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C41A37D766005E0108 /* calculus-125.jpg */; };
+		FD2148CF1A37D766005E0108 /* calculus-for-dummies-64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C51A37D766005E0108 /* calculus-for-dummies-64.jpg */; };
+		FD2148D01A37D766005E0108 /* calculus-for-dummies-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C61A37D766005E0108 /* calculus-for-dummies-125.jpg */; };
+		FD2148D11A37D766005E0108 /* calculus-intuitive-64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C71A37D766005E0108 /* calculus-intuitive-64.jpg */; };
+		FD2148D21A37D766005E0108 /* calculus-intuitive-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C81A37D766005E0108 /* calculus-intuitive-125.jpg */; };
+		FD2148D31A37D766005E0108 /* calculus-lifesaver-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C91A37D766005E0108 /* calculus-lifesaver-64.png */; };
+		FD2148D41A37D766005E0108 /* calculus-lifesaver-125.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2148CA1A37D766005E0108 /* calculus-lifesaver-125.png */; };
 		FDAE60DC1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +61,16 @@
 		FD1B72F01A24E47B007BB112 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
 		FD1B72F11A24E47B007BB112 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
 		FD1B72F31A24E536007BB112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FD2148C11A37D766005E0108 /* calculus-7th-edition-64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-7th-edition-64.jpg"; sourceTree = "<group>"; };
+		FD2148C21A37D766005E0108 /* calculus-7th-edition-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-7th-edition-125.jpg"; sourceTree = "<group>"; };
+		FD2148C31A37D766005E0108 /* calculus-64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-64.jpg"; sourceTree = "<group>"; };
+		FD2148C41A37D766005E0108 /* calculus-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-125.jpg"; sourceTree = "<group>"; };
+		FD2148C51A37D766005E0108 /* calculus-for-dummies-64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-for-dummies-64.jpg"; sourceTree = "<group>"; };
+		FD2148C61A37D766005E0108 /* calculus-for-dummies-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-for-dummies-125.jpg"; sourceTree = "<group>"; };
+		FD2148C71A37D766005E0108 /* calculus-intuitive-64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-intuitive-64.jpg"; sourceTree = "<group>"; };
+		FD2148C81A37D766005E0108 /* calculus-intuitive-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-intuitive-125.jpg"; sourceTree = "<group>"; };
+		FD2148C91A37D766005E0108 /* calculus-lifesaver-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculus-lifesaver-64.png"; sourceTree = "<group>"; };
+		FD2148CA1A37D766005E0108 /* calculus-lifesaver-125.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculus-lifesaver-125.png"; sourceTree = "<group>"; };
 		FDAE60DA1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
 		FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +130,7 @@
 		FD0DDD8E19FFD425008705B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD2148C01A37D748005E0108 /* Images */,
 				FD0DDD9219FFD425008705B1 /* AppDelegate.h */,
 				FD0DDD9319FFD425008705B1 /* AppDelegate.m */,
 				FD0DDD8F19FFD425008705B1 /* Info.plist */,
@@ -133,6 +154,23 @@
 				FD0DDDAC19FFD426008705B1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD2148C01A37D748005E0108 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FD2148C11A37D766005E0108 /* calculus-7th-edition-64.jpg */,
+				FD2148C21A37D766005E0108 /* calculus-7th-edition-125.jpg */,
+				FD2148C31A37D766005E0108 /* calculus-64.jpg */,
+				FD2148C41A37D766005E0108 /* calculus-125.jpg */,
+				FD2148C51A37D766005E0108 /* calculus-for-dummies-64.jpg */,
+				FD2148C61A37D766005E0108 /* calculus-for-dummies-125.jpg */,
+				FD2148C71A37D766005E0108 /* calculus-intuitive-64.jpg */,
+				FD2148C81A37D766005E0108 /* calculus-intuitive-125.jpg */,
+				FD2148C91A37D766005E0108 /* calculus-lifesaver-64.png */,
+				FD2148CA1A37D766005E0108 /* calculus-lifesaver-125.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		FDAE60D71A1E5EED00E3C2F3 /* Model */ = {
@@ -245,8 +283,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2148D41A37D766005E0108 /* calculus-lifesaver-125.png in Resources */,
+				FD2148CC1A37D766005E0108 /* calculus-7th-edition-125.jpg in Resources */,
+				FD2148D31A37D766005E0108 /* calculus-lifesaver-64.png in Resources */,
+				FD2148CE1A37D766005E0108 /* calculus-125.jpg in Resources */,
+				FD2148D21A37D766005E0108 /* calculus-intuitive-125.jpg in Resources */,
+				FD2148CF1A37D766005E0108 /* calculus-for-dummies-64.jpg in Resources */,
 				FD0DDD9D19FFD425008705B1 /* Main.storyboard in Resources */,
 				FD0DDDA219FFD425008705B1 /* LaunchScreen.xib in Resources */,
+				FD2148D11A37D766005E0108 /* calculus-intuitive-64.jpg in Resources */,
+				FD2148CD1A37D766005E0108 /* calculus-64.jpg in Resources */,
+				FD2148CB1A37D766005E0108 /* calculus-7th-edition-64.jpg in Resources */,
+				FD2148D01A37D766005E0108 /* calculus-for-dummies-125.jpg in Resources */,
 				FD0DDD9F19FFD425008705B1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
