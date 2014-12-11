@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @class SearchResultsTableViewCell;
 
-@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
+
+//UI Elements
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UIButton *createListingButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *price;
@@ -22,4 +27,9 @@
 @property (nonatomic, copy) NSString *imageName;
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+
+
+@property (nonatomic, retain) CLLocationManager *locationManager;
+
+
 @end

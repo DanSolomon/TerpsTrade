@@ -28,6 +28,7 @@
 		FD2148D21A37D766005E0108 /* calculus-intuitive-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C81A37D766005E0108 /* calculus-intuitive-125.jpg */; };
 		FD2148D31A37D766005E0108 /* calculus-lifesaver-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C91A37D766005E0108 /* calculus-lifesaver-64.png */; };
 		FD2148D41A37D766005E0108 /* calculus-lifesaver-125.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2148CA1A37D766005E0108 /* calculus-lifesaver-125.png */; };
+		FD66786A1A38DBE000A79C2D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6678691A38DBE000A79C2D /* CoreLocation.framework */; };
 		FDAE60DC1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		FD2148C81A37D766005E0108 /* calculus-intuitive-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-intuitive-125.jpg"; sourceTree = "<group>"; };
 		FD2148C91A37D766005E0108 /* calculus-lifesaver-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculus-lifesaver-64.png"; sourceTree = "<group>"; };
 		FD2148CA1A37D766005E0108 /* calculus-lifesaver-125.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculus-lifesaver-125.png"; sourceTree = "<group>"; };
+		FD6678691A38DBE000A79C2D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FDAE60DA1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
 		FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD66786A1A38DBE000A79C2D /* CoreLocation.framework in Frameworks */,
 				FD1B72F41A24E536007BB112 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +100,7 @@
 		FD0DDD8219FFD425008705B1 = {
 			isa = PBXGroup;
 			children = (
+				FD6678691A38DBE000A79C2D /* CoreLocation.framework */,
 				FD1B72F31A24E536007BB112 /* MapKit.framework */,
 				FD0DDD8D19FFD425008705B1 /* TerpsTrade */,
 				FD0DDDAA19FFD426008705B1 /* TerpsTradeTests */,

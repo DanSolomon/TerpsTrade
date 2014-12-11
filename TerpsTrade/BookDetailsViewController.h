@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface BookDetailsViewController : UIViewController
 
@@ -22,5 +23,6 @@
 @property (nonatomic, copy) NSString *author;
 @property (nonatomic, copy) NSString *price;
 @property (nonatomic, copy) NSString *imageName;
+@property (nonatomic, copy) CLLocation *location;
 
 @end

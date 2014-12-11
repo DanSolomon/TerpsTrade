@@ -12,17 +12,19 @@
 
 @interface MainViewController()
 
-@property (strong, nonatomic) NSArray *bookTitles;
-@property (strong, nonatomic) NSArray *authors;
-@property (strong, nonatomic) NSArray *prices;
-@property (strong, nonatomic) NSArray *distances;
-@property (strong, nonatomic) NSArray *images;
+@property (strong, nonatomic) NSArray *bookTitles; //of NSStrings
+@property (strong, nonatomic) NSArray *authors; //of NSStrings
+@property (strong, nonatomic) NSArray *prices; //of NSStrings
+@property (strong, nonatomic) NSArray *distances; //of NSStrings
+@property (strong, nonatomic) NSArray *images; //of NSStrings
+@property (strong, nonatomic) NSArray *latitudeCoordinates; //of NSStrings
+@property (strong, nonatomic) NSArray *longitudeCoordinates; //of NSStrings
 
-@property (strong, nonatomic) NSArray *englishBookTitles;
-@property (strong, nonatomic) NSArray *englishAuthors;
-@property (strong, nonatomic) NSArray *englishPrices;
-@property (strong, nonatomic) NSArray *englishDistances;
-@property (strong, nonatomic) NSArray *englishImages;
+@property (strong, nonatomic) NSArray *englishBookTitles; //of NSStrings
+@property (strong, nonatomic) NSArray *englishAuthors; //of NSStrings
+@property (strong, nonatomic) NSArray *englishPrices; //of NSStrings
+@property (strong, nonatomic) NSArray *englishDistances; //of NSStrings
+@property (strong, nonatomic) NSArray *englishImages; //of NSStrings
 
 @end
 
@@ -33,6 +35,8 @@
 @synthesize prices = _prices;
 @synthesize distances = _distances;
 @synthesize images = _images;
+@synthesize latitudeCoordinates = _latitudeCoordinates;
+@synthesize longitudeCoordinates = _longitudeCoordinates;
 
 int arrayCount = 0; // all array set to 0?
 
@@ -80,6 +84,24 @@ int arrayCount = 0; // all array set to 0?
   return _images;
 }
 
+
+//Commons 7, Ellicott Hall , Commons 1, Hagerstown Hall, Oakland Hal
+- (NSArray *)latitudeCoordinates
+{
+  if (!_latitudeCoordinates) {
+    _latitudeCoordinates = @[@"38.981508", @"38.991833", @"38.982021", @"38.992963", @"38.993785"];
+  }
+  return _latitudeCoordinates;
+}
+
+- (NSArray *)longitudeCoordinates
+{
+  if (!_longitudeCoordinates) {
+    _longitudeCoordinates = @[@"-76.944635", @"-76.946646", @"-76.943219", @"-76.950318", @"-76.949202"];
+  }
+  return _longitudeCoordinates;
+}
+
 /*
  English data
  */
@@ -118,17 +140,35 @@ int arrayCount = 0; // all array set to 0?
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.navigationController.navigationBarHidden = YES;
+  //self.navigationController.navigationBarHidden = YES;
   [self.navigationController.navigationBar setBackgroundColor:[UIColor redColor]];
   self.searchField.enabled = TRUE;
   [self.createListingButton setHidden:FALSE];
   [self.tableView setHidden:TRUE];
-  // Do any additional setup after loading the view, typically from a nib.
+  
+  
+  self.locationManager = [[CLLocationManager alloc] init];
+  self.locationManager.distanceFilter = kCLDistanceFilterNone;
+  self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+  
+  //Required for iOS 8
+  if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    [self.locationManager requestWhenInUseAuthorization];
+  }
+  [self.locationManager startUpdatingLocation];
+  
+  //Debugging statements
+  double delayInSeconds = 5.0;
+  dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+  dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+    NSLog(@"Current location: %@", [NSString stringWithFormat:@"latitude: %f longitude: %f", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude]);
+  });
+  
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-  self.navigationController.navigationBarHidden = YES;
+  //self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -185,6 +225,18 @@ int arrayCount = 0; // all array set to 0?
     cell.distanceAwayLabel.text = [self.distances objectAtIndex:indexPath.row];
     cell.authorLabel.text = [self.authors objectAtIndex:indexPath.row];
     cell.bookThumbnail.image = [UIImage imageNamed:[self.images objectAtIndex:indexPath.row]];
+    
+    CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:[[self.latitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+                                                           longitude:[[self.longitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+                                 ];
+    
+    CLLocation *location = [self.locationManager location];
+    CLLocation *endLocation = [[CLLocation alloc] initWithLatitude:location.coordinate.latitude
+                                                         longitude:location.coordinate.longitude];
+    
+    CLLocationDistance distance = [startLocation distanceFromLocation:endLocation]; // aka double
+    cell.distanceAwayLabel.text = [NSString stringWithFormat:@"%lf",distance * 0.00062137];
+    NSLog(@"Distance away: %f", distance);
   }
 
   
@@ -230,7 +282,9 @@ int arrayCount = 0; // all array set to 0?
     bookDetailsViewController.author = [NSString stringWithFormat:@"Author: %@", self.author];
     bookDetailsViewController.price = self.price;
     bookDetailsViewController.imageName = self.imageName;
-    NSLog(@"Image name: %@", self.imageName);
+    bookDetailsViewController.location = [[CLLocation alloc] initWithLatitude:[[self.latitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+                                                                    longitude:[[self.longitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+                                          ];
     
     
   }
