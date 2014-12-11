@@ -23,6 +23,9 @@
   [self.priceLabel setText:self.price];
 
 }
+
+
+
 - (IBAction)mapButtonPressed:(id)sender {
     
     [self performSegueWithIdentifier:@"mapSegue" sender:sender];
