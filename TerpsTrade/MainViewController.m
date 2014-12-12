@@ -209,6 +209,7 @@ int arrayCount = 0; // all array set to 0?
   if (arrayCount == 2) {
     return [self.globalData.englishBookTitles count];
   } else {
+    NSLog(@"# of books: %d", [self.globalData.bookTitles count]);
     return [self.globalData.bookTitles count];
   }
 }

@@ -14,4 +14,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *authorTextField;
 @property (weak, nonatomic) IBOutlet UITextField *conditionTextField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+@property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @end
