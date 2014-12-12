@@ -28,12 +28,12 @@
 
 - (IBAction)mapButtonPressed:(id)sender {
     
-    [self performSegueWithIdentifier:@"mapSegue" sender:sender];
+  //  [self performSegueWithIdentifier:@"mapSegue" sender:sender];
 }
 
 - (IBAction)messageButtonPressed:(id)sender {
-    
-    [self performSegueWithIdentifier:@"messageSeque" sender:sender];
+
+  //  [self performSegueWithIdentifier:@"messageSeque" sender:sender];
     
 }
 
@@ -46,9 +46,8 @@
         [mpc setLatitude: 73.9597];
     
     }else{//message segue
-        NSLog(@"messageSegue");
-        DemoMessagesViewController *mvc = segue.destinationViewController;
-        
+       // NSLog(@"messageSegue");
+       // DemoMessagesViewController *mvc = segue.destinationViewController;
     }
 }
 

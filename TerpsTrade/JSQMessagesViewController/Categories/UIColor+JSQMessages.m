@@ -42,7 +42,7 @@
 {
     return [UIColor colorWithHue:0.0f / 360.0f
                       saturation:0.79f
-                      brightness:1.0f
+                      brightness:.9f
                            alpha:1.0f];
 }
 

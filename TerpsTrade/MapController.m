@@ -37,8 +37,10 @@
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(longitude, latitude);
     MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, MAPSIZE, MAPSIZE)];
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = startCoord;
+     [_mapView addAnnotation:point];
     
-
     [_mapView setRegion:adjustedRegion animated:YES];
     
     

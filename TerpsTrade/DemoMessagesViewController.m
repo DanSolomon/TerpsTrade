@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"JSQMessages";
+    self.title = @"Jack";
     
     /**
      *  You MUST set your senderId and display name
@@ -62,7 +62,7 @@
         self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero;
     }
     
-    self.showLoadEarlierMessagesHeader = YES;
+    self.showLoadEarlierMessagesHeader = NO;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage jsq_defaultTypingIndicatorImage]
                                                                               style:UIBarButtonItemStyleBordered
@@ -344,10 +344,12 @@
      *  Otherwise, return your previously created bubble image data objects.
      */
     
+    
+    
     JSQMessage *message = [self.demoData.messages objectAtIndex:indexPath.item];
     
     if ([message.senderId isEqualToString:self.senderId]) {
-        return self.demoData.outgoingBubbleImageData;
+       return self.demoData.outgoingBubbleImageData;
     }
     
     return self.demoData.incomingBubbleImageData;
@@ -470,10 +472,10 @@
     if (!msg.isMediaMessage) {
         
         if ([msg.senderId isEqualToString:self.senderId]) {
-            cell.textView.textColor = [UIColor blackColor];
+            cell.textView.textColor = [UIColor whiteColor];
         }
         else {
-            cell.textView.textColor = [UIColor whiteColor];
+            cell.textView.textColor = [UIColor blackColor];
         }
         
         cell.textView.linkTextAttributes = @{ NSForegroundColorAttributeName : cell.textView.textColor,
