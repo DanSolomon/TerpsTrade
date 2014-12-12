@@ -31,5 +31,7 @@
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
+- (IBAction)showRightMenuPressed:(id)sender;
+
 
 @end

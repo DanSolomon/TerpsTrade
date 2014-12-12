@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "SearchResultsTableViewCell.h"
 #import "BookDetailsViewController.h"
+#import "MFSideMenu.h"
 
 @interface MainViewController()
 
@@ -140,6 +141,7 @@ int arrayCount = 0; // all array set to 0?
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"Home";
   //self.navigationController.navigationBarHidden = YES;
   [self.navigationController.navigationBar setBackgroundColor:[UIColor redColor]];
   self.searchField.enabled = TRUE;
@@ -265,6 +267,14 @@ int arrayCount = 0; // all array set to 0?
   [textField resignFirstResponder];
   return YES;
 }
+
+#pragma mark - Side Menu
+- (IBAction)showRightMenuPressed:(id)sender {
+  [self.menuContainerViewController toggleRightSideMenuCompletion:nil];
+}
+
+
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

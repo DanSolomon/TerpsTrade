@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MFSideMenuContainerViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -16,7 +18,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  /*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+  MFSideMenuContainerViewController *container = (MFSideMenuContainerViewController *)self.window.rootViewController;
+  UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"navigationController"];
+  UIViewController *rightSideMenuViewController = [storyboard instantiateViewControllerWithIdentifier:@"rightSideMenuViewController"];
+  
+  
+  [container setRightMenuViewController:rightSideMenuViewController];
+  [container setCenterViewController:navigationController];*/
+  UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                           bundle: nil];
+
+  UINavigationController *navigationController = [mainStoryboard instantiateViewControllerWithIdentifier:@"navigationController"];
+  UIViewController *rightSideMenuViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"rightSideMenuViewController"];
+
+  MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                  containerWithCenterViewController:navigationController
+                                                  leftMenuViewController: nil
+                                                  rightMenuViewController:rightSideMenuViewController];
+  self.window.rootViewController = container;
+  [self.window makeKeyAndVisible];
+  
+  
   return YES;
 }
 
