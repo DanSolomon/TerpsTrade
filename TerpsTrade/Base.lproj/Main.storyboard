@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="1970" y="-280"/>
         </scene>
-        <!--View Controller-->
+        <!--New Posting View Controller-->
         <scene sceneID="niR-im-223">
             <objects>
-                <viewController id="jY9-DL-cAr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostingViewController" id="jY9-DL-cAr" customClass="NewPostingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oId-v8-WmS"/>
                         <viewControllerLayoutGuide type="bottom" id="H1o-2M-zAg"/>
@@ -240,63 +240,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeO-1a-noX">
-                                <rect key="frame" x="16" y="181" width="37" height="21"/>
+                                <rect key="frame" x="16" y="216" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYD-OG-1wG">
-                                <rect key="frame" x="16" y="219" width="56" height="21"/>
+                                <rect key="frame" x="16" y="254" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itq-9Z-pNU">
-                                <rect key="frame" x="16" y="295" width="93" height="21"/>
+                                <rect key="frame" x="16" y="330" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Condition:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg5-1o-O7o">
-                                <rect key="frame" x="16" y="257" width="80" height="21"/>
+                                <rect key="frame" x="16" y="292" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLU-Xh-4um">
-                                <rect key="frame" x="61" y="177" width="243" height="30"/>
+                                <rect key="frame" x="61" y="212" width="243" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwB-YG-bEy">
-                                <rect key="frame" x="104" y="253" width="200" height="30"/>
+                                <rect key="frame" x="104" y="288" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wy-7I-n8S">
-                                <rect key="frame" x="80" y="215" width="224" height="30"/>
+                                <rect key="frame" x="80" y="250" width="224" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j3O-a3-724">
-                                <rect key="frame" x="117" y="291" width="187" height="30"/>
+                                <rect key="frame" x="117" y="326" width="187" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="au8-wT-NQ8">
-                                <rect key="frame" x="123" y="49" width="75" height="75"/>
+                                <rect key="frame" x="123" y="99" width="75" height="75"/>
                                 <state key="normal" image="default_picture.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setTextbookPostThumbnail:" destination="jY9-DL-cAr" eventType="touchUpInside" id="oqu-BM-MVF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nm-bf-H5e">
+                                <rect key="frame" x="16" y="505" width="288" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Post!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="VTO-2V-1wF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="authorTextField" destination="7wy-7I-n8S" id="jAj-7q-Zwt"/>
+                        <outlet property="conditionTextField" destination="SwB-YG-bEy" id="PmF-zt-rhB"/>
+                        <outlet property="descriptionTextField" destination="j3O-a3-724" id="gky-n6-IY3"/>
+                        <outlet property="titleTextField" destination="qLU-Xh-4um" id="Pa2-FP-p2u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nos-7R-bAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="1056"/>
+            <point key="canvasLocation" x="708" y="1120"/>
         </scene>
         <!--Side Menu Container View Controller-->
         <scene sceneID="pL1-Pn-vj1">
@@ -384,4 +403,7 @@
         <image name="default_picture.png" width="75" height="75"/>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VTO-2V-1wF"/>
+    </inferredMetricsTieBreakers>
 </document>

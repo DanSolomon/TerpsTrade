@@ -10,4 +10,7 @@
 
 @implementation NewPostingViewController
 
+- (IBAction)setTextbookPostThumbnail:(UIButton *)sender {
+}
+
 @end

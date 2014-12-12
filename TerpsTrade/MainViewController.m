@@ -13,7 +13,7 @@
 
 @interface MainViewController()
 
-@property (strong, nonatomic) NSArray *bookTitles; //of NSStrings
+/*@property (strong, nonatomic) NSArray *bookTitles; //of NSStrings
 @property (strong, nonatomic) NSArray *authors; //of NSStrings
 @property (strong, nonatomic) NSArray *prices; //of NSStrings
 @property (strong, nonatomic) NSArray *distances; //of NSStrings
@@ -25,19 +25,19 @@
 @property (strong, nonatomic) NSArray *englishAuthors; //of NSStrings
 @property (strong, nonatomic) NSArray *englishPrices; //of NSStrings
 @property (strong, nonatomic) NSArray *englishDistances; //of NSStrings
-@property (strong, nonatomic) NSArray *englishImages; //of NSStrings
+@property (strong, nonatomic) NSArray *englishImages; //of NSStrings*/
 
 @end
 
 @implementation MainViewController
 
-@synthesize bookTitles = _bookTitles;
+/*@synthesize bookTitles = _bookTitles;
 @synthesize authors = _authors;
 @synthesize prices = _prices;
 @synthesize distances = _distances;
 @synthesize images = _images;
 @synthesize latitudeCoordinates = _latitudeCoordinates;
-@synthesize longitudeCoordinates = _longitudeCoordinates;
+@synthesize longitudeCoordinates = _longitudeCoordinates;*/
 
 int arrayCount = 0; // all array set to 0?
 
@@ -45,7 +45,7 @@ int arrayCount = 0; // all array set to 0?
 /*
  Calculus data
  */
-- (NSArray *)bookTitles
+/*- (NSArray *)bookTitles
 {
   if (!_bookTitles) {
     _bookTitles = @[@"Calculus: An Intuitive and Physical Approach", @"Calculus For Dummies", @"The Calculus Lifesaver", @"Calculus", @"Calculus, 7th Edition"];
@@ -101,12 +101,12 @@ int arrayCount = 0; // all array set to 0?
     _longitudeCoordinates = @[@"-76.944635", @"-76.946646", @"-76.943219", @"-76.950318", @"-76.949202"];
   }
   return _longitudeCoordinates;
-}
+}*/
 
 /*
  English data
  */
-- (NSArray *)englishBookTitles
+/*- (NSArray *)englishBookTitles
 {
   if (!_englishBookTitles) {
     _englishBookTitles = @[@"English101: Literature", @"English for Dummies", @"English: We Speak gewd yes.", @"English: The Untold Stories", @"English."];
@@ -136,11 +136,15 @@ int arrayCount = 0; // all array set to 0?
     _englishDistances = @[@"0.4 mi", @"1.6 mi", @"0.4 mi", @"1.0 mi", @".1 mi"];
   }
   return _englishDistances;
-}
+}*/
 
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  self.globalData = [GlobalData sharedInstance];
+
+  
   self.title = @"Home";
   //self.navigationController.navigationBarHidden = YES;
   [self.navigationController.navigationBar setBackgroundColor:[UIColor redColor]];
@@ -201,7 +205,12 @@ int arrayCount = 0; // all array set to 0?
 #pragma mark - UITableView Delegates
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return [self.bookTitles count];
+  //return [self.bookTitles count];
+  if (arrayCount == 2) {
+    return [self.globalData.englishBookTitles count];
+  } else {
+    return [self.globalData.bookTitles count];
+  }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -215,21 +224,34 @@ int arrayCount = 0; // all array set to 0?
   
   
   if(arrayCount == 2){
-    cell.titleLabel.text = [self.englishBookTitles objectAtIndex:indexPath.row];
+    /*cell.titleLabel.text = [self.englishBookTitles objectAtIndex:indexPath.row];
     cell.priceLabel.text = [self.englishPrices objectAtIndex:indexPath.row];
     cell.distanceAwayLabel.text = [self.englishDistances objectAtIndex:indexPath.row];
     cell.authorLabel.text = [self.englishAuthors objectAtIndex:indexPath.row];
-    cell.bookThumbnail.image = [UIImage imageNamed:[self.images objectAtIndex:indexPath.row]];
+    cell.bookThumbnail.image = [UIImage imageNamed:[self.images objectAtIndex:indexPath.row]];*/
+    
+    cell.titleLabel.text = [self.globalData.englishBookTitles objectAtIndex:indexPath.row];
+    cell.priceLabel.text = [self.globalData.englishPrices objectAtIndex:indexPath.row];
+    cell.distanceAwayLabel.text = [self.globalData.englishDistances objectAtIndex:indexPath.row];
+    cell.authorLabel.text = [self.globalData.englishAuthors objectAtIndex:indexPath.row];
+    cell.bookThumbnail.image = [UIImage imageNamed:[self.globalData.images objectAtIndex:indexPath.row]];
     
   } else {
-    cell.titleLabel.text = [self.bookTitles objectAtIndex:indexPath.row];
+    /*cell.titleLabel.text = [self.bookTitles objectAtIndex:indexPath.row];
     cell.priceLabel.text = [self.prices objectAtIndex:indexPath.row];
     cell.distanceAwayLabel.text = [self.distances objectAtIndex:indexPath.row];
     cell.authorLabel.text = [self.authors objectAtIndex:indexPath.row];
-    cell.bookThumbnail.image = [UIImage imageNamed:[self.images objectAtIndex:indexPath.row]];
+    cell.bookThumbnail.image = [UIImage imageNamed:[self.images objectAtIndex:indexPath.row]];*/
     
-    CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:[[self.latitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
-                                                           longitude:[[self.longitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+    cell.titleLabel.text = [self.globalData.bookTitles objectAtIndex:indexPath.row];
+    cell.priceLabel.text = [self.globalData.prices objectAtIndex:indexPath.row];
+    cell.distanceAwayLabel.text = [self.globalData.distances objectAtIndex:indexPath.row];
+    cell.authorLabel.text = [self.globalData.authors objectAtIndex:indexPath.row];
+    cell.bookThumbnail.image = [UIImage imageNamed:[self.globalData.images objectAtIndex:indexPath.row]];
+    
+    
+    CLLocation *startLocation = [[CLLocation alloc] initWithLatitude:[[self.globalData.latitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+                                                           longitude:[[self.globalData.longitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
                                  ];
     
     CLLocation *location = [self.locationManager location];
@@ -283,17 +305,23 @@ int arrayCount = 0; // all array set to 0?
     
     NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
     
-    self.title = [self.bookTitles objectAtIndex:indexPath.row];
+    /*self.title = [self.bookTitles objectAtIndex:indexPath.row];
     self.author = [self.authors objectAtIndex:indexPath.row];
     self.price = [self.prices objectAtIndex:indexPath.row];
-    self.imageName = [self.images objectAtIndex:indexPath.row];
+    self.imageName = [self.images objectAtIndex:indexPath.row];*/
+    
+    self.title = [self.globalData.bookTitles objectAtIndex:indexPath.row];
+    self.author = [self.globalData.authors objectAtIndex:indexPath.row];
+    self.price = [self.globalData.prices objectAtIndex:indexPath.row];
+    self.imageName = [self.globalData.images objectAtIndex:indexPath.row];
+    
     
     bookDetailsViewController.title = self.title;
     bookDetailsViewController.author = [NSString stringWithFormat:@"Author: %@", self.author];
     bookDetailsViewController.price = self.price;
     bookDetailsViewController.imageName = self.imageName;
-    bookDetailsViewController.location = [[CLLocation alloc] initWithLatitude:[[self.latitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
-                                                                    longitude:[[self.longitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+    bookDetailsViewController.location = [[CLLocation alloc] initWithLatitude:[[self.globalData.latitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
+                                                                    longitude:[[self.globalData.longitudeCoordinates objectAtIndex:indexPath.row] doubleValue]
                                           ];
     
     

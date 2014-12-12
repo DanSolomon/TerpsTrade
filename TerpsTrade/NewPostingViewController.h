@@ -10,4 +10,8 @@
 
 @interface NewPostingViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *authorTextField;
+@property (weak, nonatomic) IBOutlet UITextField *conditionTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @end

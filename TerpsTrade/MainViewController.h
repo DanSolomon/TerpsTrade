@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "GlobalData.h"
 
 @class SearchResultsTableViewCell;
 
 @interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
+
+@property (retain) GlobalData *globalData;
+
 
 //UI Elements
 @property (weak, nonatomic) IBOutlet UITextField *searchField;

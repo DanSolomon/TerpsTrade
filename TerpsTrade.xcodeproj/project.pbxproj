@@ -38,6 +38,7 @@
 		FD6AE8341A3A422F00C4DB7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6AE8331A3A422F00C4DB7B /* CoreGraphics.framework */; };
 		FD6AE8361A3A939900C4DB7B /* default_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = FD6AE8351A3A939900C4DB7B /* default_picture.png */; };
 		FD6AE8391A3A94FA00C4DB7B /* NewPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6AE8381A3A94FA00C4DB7B /* NewPostingViewController.m */; };
+		FD6AE83C1A3A9C4000C4DB7B /* GlobalData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6AE83B1A3A9C4000C4DB7B /* GlobalData.m */; };
 		FDAE60DC1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,8 @@
 		FD6AE8351A3A939900C4DB7B /* default_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_picture.png; sourceTree = "<group>"; };
 		FD6AE8371A3A94FA00C4DB7B /* NewPostingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPostingViewController.h; sourceTree = "<group>"; };
 		FD6AE8381A3A94FA00C4DB7B /* NewPostingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPostingViewController.m; sourceTree = "<group>"; };
+		FD6AE83A1A3A9C4000C4DB7B /* GlobalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalData.h; sourceTree = "<group>"; };
+		FD6AE83B1A3A9C4000C4DB7B /* GlobalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalData.m; sourceTree = "<group>"; };
 		FDAE60DA1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
 		FDAE60DB1A1E5FAB00E3C2F3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +149,8 @@
 		FD0DDD8D19FFD425008705B1 /* TerpsTrade */ = {
 			isa = PBXGroup;
 			children = (
+				FD6AE83A1A3A9C4000C4DB7B /* GlobalData.h */,
+				FD6AE83B1A3A9C4000C4DB7B /* GlobalData.m */,
 				FDAE60D71A1E5EED00E3C2F3 /* Model */,
 				FDAE60D81A1E5EF200E3C2F3 /* View */,
 				FDAE60D91A1E5EF900E3C2F3 /* Controller */,
@@ -369,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6AE8311A3A2D1000C4DB7B /* SideMenuViewController.m in Sources */,
+				FD6AE83C1A3A9C4000C4DB7B /* GlobalData.m in Sources */,
 				FD0B9CB01A242D9200C7B093 /* BookDetailsViewController.m in Sources */,
 				FD6AE8321A3A2D1000C4DB7B /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				FD0DDD9419FFD425008705B1 /* AppDelegate.m in Sources */,

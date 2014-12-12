@@ -7,6 +7,7 @@
 #import "SideMenuViewController.h"
 #import "MFSideMenu.h"
 #import "MainViewController.h"
+#import "NewPostingViewController.h"
 
 @interface SideMenuViewController()
 
@@ -70,8 +71,9 @@
     NSArray *controllers = [NSArray arrayWithObject:demoViewController];
     navigationController.viewControllers = controllers;
     [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];*/
-  MainViewController *demoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-  demoViewController.title = [NSString stringWithFormat:@"Demo #%d-%d", indexPath.section, indexPath.row];
+  
+  NewPostingViewController *demoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NewPostingViewController"];
+  //demoViewController.title = [NSString stringWithFormat:@"Demo #%d-%d", indexPath.section, indexPath.row];
   
   UINavigationController *navigationController = self.menuContainerViewController.centerViewController;
   NSArray *controllers = [NSArray arrayWithObject:demoViewController];
