@@ -10,6 +10,8 @@
 
 @implementation GlobalData
 
+
+//Init singleton
 + (GlobalData *)sharedInstance {
   static dispatch_once_t onceToken;
   static GlobalData *instance = nil;
@@ -22,14 +24,6 @@
 - (id)init {
   self = [super init];
   if (self) {
-    /*_bookTitles = [[NSMutableArray alloc] initWithObjects:@"Calculus: An Intuitive and Physical Approach", @"Calculus For Dummies", @"The Calculus Lifesaver", @"Calculus", @"Calculus, 7th Edition", nil];
-    _authors = [[NSMutableArray alloc] initWithObjects:@"Morris Kline", @"Mark Ryan", @"Adrian Bonner", @"Ron Larson and Bruce H. Edwards", @"James Stewart", nil];
-    _prices = [[NSMutableArray alloc] initWithObjects:@"$55", @"$20", @"$100", @"$233.33", @"$266.65", nil];
-    _distances = [[NSMutableArray alloc] initWithObjects:@"0.3 mi", @"0.6 mi", @"0.9 mi", @"1.1 mi", @"1.2 mi", nil];
-    _images = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"calculus-intuitive-64.jpg"], [UIImage imageNamed:@"calculus-for-dummies-64.jpg"], [UIImage imageNamed:@"calculus-lifesaver-64.png"], [UIImage imageNamed:@"calculus-64.jpg"], [UIImage imageNamed:@"calculus-7th-edition-64.jpg"], nil];
-    _latitudeCoordinates = [[NSMutableArray alloc] initWithObjects:@"38.981508", @"38.991833", @"38.982021", @"38.992963", @"38.993785", nil];
-    _longitudeCoordinates = [[NSMutableArray alloc] initWithObjects:@"-76.944635", @"-76.946646", @"-76.943219", @"-76.950318", @"-76.949202", nil];*/
-    
     _bookTitles = [[NSMutableArray alloc] initWithObjects:@"Calculus: An Intuitive and Physical Approach", @"The Calculus Lifesaver", @"Calculus", @"Calculus, 7th Edition", @"Calculus For Dummies", nil];
     _authors = [[NSMutableArray alloc] initWithObjects:@"Morris Kline", @"Adrian Bonner", @"Ron Larson and Bruce H. Edwards", @"James Stewart",  @"Mark Ryan", nil];
     _prices = [[NSMutableArray alloc] initWithObjects:@"$55", @"$100", @"$233.33", @"$266.65", @"$20", nil];

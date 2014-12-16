@@ -27,7 +27,7 @@
 }
 
 
-+ (GlobalData *)sharedInstance;
++ (GlobalData *)sharedInstance; //singleton
 
 
 @property (strong, nonatomic) NSMutableArray *bookTitles; //of NSStrings
