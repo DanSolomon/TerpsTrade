@@ -77,6 +77,9 @@
 		FD2148D21A37D766005E0108 /* calculus-intuitive-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C81A37D766005E0108 /* calculus-intuitive-125.jpg */; };
 		FD2148D31A37D766005E0108 /* calculus-lifesaver-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2148C91A37D766005E0108 /* calculus-lifesaver-64.png */; };
 		FD2148D41A37D766005E0108 /* calculus-lifesaver-125.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2148CA1A37D766005E0108 /* calculus-lifesaver-125.png */; };
+		FD32375B1A3FB27E003FC178 /* search_button_ill.png in Resources */ = {isa = PBXBuildFile; fileRef = FD32375A1A3FB27E003FC178 /* search_button_ill.png */; };
+		FD32375D1A3FB3BA003FC178 /* search_button_ill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD32375C1A3FB3BA003FC178 /* search_button_ill@2x.png */; };
+		FD3237631A3FB7EA003FC178 /* add_post_button_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3237621A3FB7EA003FC178 /* add_post_button_2@2x.png */; };
 		FD3C7AAA1A3E1D0F007ABD34 /* search_button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3C7AA91A3E1D0F007ABD34 /* search_button_2.png */; };
 		FD3C7AAC1A3E2EBB007ABD34 /* add_post_button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD3C7AAB1A3E2EBB007ABD34 /* add_post_button.jpg */; };
 		FD3C7AAE1A3E2F31007ABD34 /* add_post_button.png in Resources */ = {isa = PBXBuildFile; fileRef = FD3C7AAD1A3E2F31007ABD34 /* add_post_button.png */; };
@@ -251,6 +254,9 @@
 		FD2148C81A37D766005E0108 /* calculus-intuitive-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "calculus-intuitive-125.jpg"; sourceTree = "<group>"; };
 		FD2148C91A37D766005E0108 /* calculus-lifesaver-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculus-lifesaver-64.png"; sourceTree = "<group>"; };
 		FD2148CA1A37D766005E0108 /* calculus-lifesaver-125.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculus-lifesaver-125.png"; sourceTree = "<group>"; };
+		FD32375A1A3FB27E003FC178 /* search_button_ill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_button_ill.png; sourceTree = "<group>"; };
+		FD32375C1A3FB3BA003FC178 /* search_button_ill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_button_ill@2x.png"; sourceTree = "<group>"; };
+		FD3237621A3FB7EA003FC178 /* add_post_button_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_post_button_2@2x.png"; sourceTree = "<group>"; };
 		FD3C7AA91A3E1D0F007ABD34 /* search_button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_button_2.png; sourceTree = "<group>"; };
 		FD3C7AAB1A3E2EBB007ABD34 /* add_post_button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = add_post_button.jpg; sourceTree = "<group>"; };
 		FD3C7AAD1A3E2F31007ABD34 /* add_post_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_post_button.png; sourceTree = "<group>"; };
@@ -550,6 +556,9 @@
 		FD2148C01A37D748005E0108 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FD3237621A3FB7EA003FC178 /* add_post_button_2@2x.png */,
+				FD32375C1A3FB3BA003FC178 /* search_button_ill@2x.png */,
+				FD32375A1A3FB27E003FC178 /* search_button_ill.png */,
 				FD3C7AAF1A3E3060007ABD34 /* add_post_button_2.png */,
 				FD3C7AAD1A3E2F31007ABD34 /* add_post_button.png */,
 				FD3C7AAB1A3E2EBB007ABD34 /* add_post_button.jpg */,
@@ -748,7 +757,9 @@
 				A162FCE61A3B9ED1005DDA31 /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				FD3C7AAA1A3E1D0F007ABD34 /* search_button_2.png in Resources */,
 				A162FCC91A3B9ED1005DDA31 /* JSQMessages.strings in Resources */,
+				FD3237631A3FB7EA003FC178 /* add_post_button_2@2x.png in Resources */,
 				FD2148CF1A37D766005E0108 /* calculus-for-dummies-64.jpg in Resources */,
+				FD32375B1A3FB27E003FC178 /* search_button_ill.png in Resources */,
 				FD0DDD9D19FFD425008705B1 /* Main.storyboard in Resources */,
 				FD0DDDA219FFD425008705B1 /* LaunchScreen.xib in Resources */,
 				FD5E806B1A3E05E400AB2C8A /* house_icon.png in Resources */,
@@ -761,6 +772,7 @@
 				A162FCC81A3B9ED1005DDA31 /* JSQMessagesAssets.bundle in Resources */,
 				A162FCD21A3B9ED1005DDA31 /* JSQMessagesViewController.xib in Resources */,
 				FD2148D01A37D766005E0108 /* calculus-for-dummies-125.jpg in Resources */,
+				FD32375D1A3FB3BA003FC178 /* search_button_ill@2x.png in Resources */,
 				FD0DDD9F19FFD425008705B1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

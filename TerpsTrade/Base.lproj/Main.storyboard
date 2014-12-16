@@ -18,7 +18,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ly-oe-wAA">
                                 <rect key="frame" x="79" y="268" width="150" height="150"/>
-                                <state key="normal" image="add_post_button_2.png">
+                                <state key="normal" image="add_post_button_2@2x.png">
                                     <color key="titleColor" red="1" green="0.3303694995" blue="0.1909521559" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,8 +27,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSh-Px-6tE">
-                                <rect key="frame" x="242" y="80" width="55" height="30"/>
-                                <state key="normal" image="search_button_2.png">
+                                <rect key="frame" x="244" y="80" width="55" height="30"/>
+                                <state key="normal" image="search_button_ill@2x.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -166,7 +166,7 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Map">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.28235294117647058" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="hhi-vI-dTX" kind="show" identifier="mapSegue" id="rQE-aE-QmQ"/>
@@ -177,7 +177,7 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Message">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.28235294117647058" blue="0.24106752622377622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="dwB-3L-1X7" kind="show" identifier="messageSegue" id="F0Z-Uh-ald"/>
@@ -397,6 +397,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="mapView" destination="aeb-w3-H6C" id="Aqt-OT-HwV"/>
@@ -419,6 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4D-s2-S1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -446,11 +448,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add_post_button_2.png" width="150" height="150"/>
+        <image name="add_post_button_2@2x.png" width="150" height="150"/>
         <image name="default_picture-100.png" width="100" height="100"/>
         <image name="house_icon.png" width="20" height="20"/>
         <image name="reveal-icon.png" width="22" height="17"/>
-        <image name="search_button_2.png" width="55" height="30"/>
+        <image name="search_button_ill@2x.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="REA-jg-jKk"/>
