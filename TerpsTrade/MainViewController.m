@@ -96,37 +96,27 @@ int arrayCount = 0; // all array set to 0?
   }
   
   
-  NSLog(@"Before: %@", distances);
-  /*
-   bookTitles
-   authors
-   prices
-   distances
-   images
-   latitude_coordinates
-   longtitude_coordinates
-   */
-  /*for (int a = 1; a < [distances count] - 1; a++) {
-    int b = a;
-    while (b > 0 && [distances objectAtIndex:(b-1)] > [distances objectAtIndex:b]) {
-      [distances exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      [self.globalData.bookTitles exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      [self.globalData.authors exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      [self.globalData.prices exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      [self.globalData.distances exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      [self.globalData.images exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      [self.globalData.latitudeCoordinates exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      [self.globalData.longitudeCoordinates exchangeObjectAtIndex:b withObjectAtIndex:b-1];
-      
-      b = b - 1;
-    }
-    
-  }*/
-
-  NSLog(@"After: %@", distances);
-
   
-  //cell.distanceAwayLabel.text = [NSString stringWithFormat:@"%.02lf mi",distance * 0.00062137];
+  //Insertion sort the list by distance
+  long count = distances.count;
+  int i,j;
+  for (i=1; i<count;i++)
+  {
+    j=i;
+    while(j>0 && [[distances objectAtIndex:(j-1)] doubleValue] > [[distances objectAtIndex:j] doubleValue])
+    {
+      [distances exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+      [self.globalData.bookTitles exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+      [self.globalData.authors exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+      [self.globalData.prices exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+      [self.globalData.distances exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+      [self.globalData.images exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+      [self.globalData.latitudeCoordinates exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+      [self.globalData.longitudeCoordinates exchangeObjectAtIndex:j withObjectAtIndex:(j-1)];
+
+      j=j-1;
+    }
+  }
   
 }
 

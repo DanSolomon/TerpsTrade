@@ -10,14 +10,14 @@
 	<string>TerpsTrade</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AB87B75B6EE96E662B7E79C695825AB244CD0570</key>
+		<key>D0B692D03FE251D22ED65E1A9B6EC48EBC41559B</key>
 		<string>https://github.com/JT9193/TerpTrade.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TerpsTrade.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AB87B75B6EE96E662B7E79C695825AB244CD0570</key>
+		<key>D0B692D03FE251D22ED65E1A9B6EC48EBC41559B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AB87B75B6EE96E662B7E79C695825AB244CD0570</string>
+	<string>D0B692D03FE251D22ED65E1A9B6EC48EBC41559B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AB87B75B6EE96E662B7E79C695825AB244CD0570</string>
+			<string>D0B692D03FE251D22ED65E1A9B6EC48EBC41559B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TerpsTrade</string>
 		</dict>
