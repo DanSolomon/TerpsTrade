@@ -4,7 +4,7 @@ This iOS application has been designed to facilitate buying, selling, and tradin
 
 Install/Running
 =========
-Using a computer that has XCode (version 6.1.1) installed, you can run the app by downloading the zipfile [here](https://github.com/JT9193/TerpsTrade), open the .xcodeproj file, and run the project by pressing the top left arrow. Select the iPhone 5 or 5s for the simulator near the top left, as this app has been optimized to run on those screen sizes.
+Using a computer that has XCode (version 6.1.1) installed, you can run the app by downloading the zipfile, opening the .xcodeproj file, and building/running the project by pressing the top left arrow. Select the iPhone 5 or 5s for the simulator near the top left, as this app has been optimized to run on those screen sizes.
 
 The Three Tasks
 =========
