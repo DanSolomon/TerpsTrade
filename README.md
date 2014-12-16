@@ -2,9 +2,9 @@ TerpsTrade
 =========
 This iOS application has been designed to facilitate buying, selling, and trading textbooks between students. 
 
-Install
+Install/Running
 =========
-To run the app, you can download the zipfile and run the .xcodeproj file.
+Using a computer that has XCode installed, you can run the app by downloading the zipfile [here](https://github.com/JT9193/TerpsTrade), open the .xcodeproj file, and run the project by pressing the top left arrow. Select the iPhone 5 or 5s for the simulator near the top left, as this app has been optimized to run on those screen sizes.
 
 The Three Tasks
 =========
