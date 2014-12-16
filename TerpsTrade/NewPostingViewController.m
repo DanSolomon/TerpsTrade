@@ -15,6 +15,19 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  
+  //Initialize location manager
+  self.locationManager = [[CLLocationManager alloc] init];
+  self.locationManager.distanceFilter = kCLDistanceFilterNone;
+  self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+  
+  //Required for iOS 8- for CoreLocation framework
+  if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    [self.locationManager requestWhenInUseAuthorization];
+  }
+  [self.locationManager startUpdatingLocation];
+  
   self.title = @"New Post";
   
   
@@ -73,8 +86,11 @@
   [globalData.prices addObject:self.priceTextField.text];
   [globalData.distances addObject:@"0.5 mi"];
   [globalData.images addObject:self.image];
-  [globalData.latitudeCoordinates addObject:@"38.981508"];
-  [globalData.longitudeCoordinates addObject:@"-76.944635"];
+  [globalData.latitudeCoordinates addObject:[NSString stringWithFormat:@"%f", self.locationManager.location.coordinate.latitude]];
+  [globalData.longitudeCoordinates addObject:[NSString stringWithFormat:@"%f", self.locationManager.location.coordinate.longitude]];
+  
+  
+  [self.locationManager stopUpdatingLocation];
   
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Textbook posted!"
                                                   message:@"Post successfully created"

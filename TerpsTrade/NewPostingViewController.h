@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface NewPostingViewController : UIViewController <UIImagePickerControllerDelegate, UITextFieldDelegate>
+@interface NewPostingViewController : UIViewController <UIImagePickerControllerDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *authorTextField;
@@ -20,4 +22,10 @@
 @property (weak, nonatomic) UIImage *image;
 
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
+
+
+@property (nonatomic, retain) CLLocationManager *locationManager;
+
+
+
 @end

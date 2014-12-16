@@ -248,6 +248,8 @@ int arrayCount = 0; // all array set to 0?
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   if([[segue identifier] isEqualToString:@"ShowDetails"]) {
+    [self.locationManager stopUpdatingLocation];
+    
     BookDetailsViewController *bookDetailsViewController = segue.destinationViewController;
     
     NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
