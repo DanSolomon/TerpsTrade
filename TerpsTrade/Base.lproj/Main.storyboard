@@ -294,6 +294,7 @@
                                 <rect key="frame" x="16" y="505" width="288" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Post!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -455,6 +456,6 @@
         <image name="search_button_ill@2x.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="REA-jg-jKk"/>
+        <segue reference="VTO-2V-1wF"/>
     </inferredMetricsTieBreakers>
 </document>
